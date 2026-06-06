@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Desktop Wallpaper
+Comment=Animated video wallpaper engine
+Exec=/home/stitcyyt/.local/bin/desktop-wallpaper
+Type=Application
+Categories=Utility;
+Terminal=false
+Icon=desktop-wallpaper
+StartupNotify=false
