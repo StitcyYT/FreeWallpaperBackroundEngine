@@ -237,8 +237,15 @@ void Renderer::render(const uint8_t* rgbData, int width, int height) {
 
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, m_texture);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0,
-                 GL_RGB, GL_UNSIGNED_BYTE, rgbData);
+
+    if (width != m_texWidth || height != m_texHeight) {
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0,
+                     GL_RGB, GL_UNSIGNED_BYTE, nullptr);
+        m_texWidth = width;
+        m_texHeight = height;
+    }
+    glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, width, height,
+                    GL_RGB, GL_UNSIGNED_BYTE, rgbData);
 
     glUseProgram(m_program);
     glUniform1i(m_texLoc, 0);

@@ -30,4 +30,5 @@ private:
     int m_texLoc = -1;
 
     int m_winWidth = 0, m_winHeight = 0;
+    int m_texWidth = 0, m_texHeight = 0;
 };
