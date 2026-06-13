@@ -43,6 +43,8 @@ else()
     pkg_check_modules(SWSW REQUIRED libswscale)
     pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
     pkg_check_modules(X11 REQUIRED x11)
+    pkg_check_modules(XRANDR REQUIRED xrandr)
+    pkg_check_modules(EGL REQUIRED egl)
 
     find_package(OpenGL REQUIRED)
 
@@ -55,11 +57,14 @@ else()
     list(APPEND PLATFORM_LIBS
         ${OPENGL_LIBRARIES}
         ${X11_LIBRARIES}
-        GLEW
+        ${XRANDR_LIBRARIES}
+        ${EGL_LIBRARIES}
         pthread
     )
     list(APPEND PLATFORM_INCS
         ${X11_INCLUDE_DIRS}
+        ${XRANDR_INCLUDE_DIRS}
+        ${EGL_INCLUDE_DIRS}
     )
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 endif()

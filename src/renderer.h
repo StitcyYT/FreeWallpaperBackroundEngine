@@ -19,7 +19,13 @@ private:
     unsigned int linkProgram(unsigned int vertex, unsigned int fragment);
 
     const Platform& m_platform;
-    void* m_glContext = nullptr;  // GLXContext on Linux, HGLRC on Windows
+#ifdef _WIN32
+    void* m_glContext = nullptr;  // HGLRC
+#else
+    void* m_eglDisplay = nullptr;
+    void* m_eglContext = nullptr;
+    void* m_eglSurface = nullptr;
+#endif
     bool m_valid = false;
 
     unsigned int m_program = 0;
@@ -30,5 +36,4 @@ private:
     int m_texLoc = -1;
 
     int m_winWidth = 0, m_winHeight = 0;
-    int m_texWidth = 0, m_texHeight = 0;
 };

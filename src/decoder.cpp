@@ -57,7 +57,6 @@ bool Decoder::openCodec() {
         m_width, m_height, AV_PIX_FMT_RGB24,
         SWS_BILINEAR, nullptr, nullptr, nullptr
     );
-    if (!m_swsCtx) return false;
 
     m_valid = true;
     return true;
@@ -137,9 +136,8 @@ void Decoder::decodeLoop() {
         uint8_t* dst[4] = { frame->data.data(), nullptr, nullptr, nullptr };
         int dstStride[4] = { m_width * 3, 0, 0, 0 };
 
-        if (m_swsCtx)
-            sws_scale(m_swsCtx, m_frame->data, m_frame->linesize,
-                      0, m_height, dst, dstStride);
+        sws_scale(m_swsCtx, m_frame->data, m_frame->linesize,
+                  0, m_height, dst, dstStride);
 
         m_latestFrame.store(frame);
         lastFrameTime = std::chrono::steady_clock::now();

@@ -30,7 +30,8 @@ wbe-lnx: \
   /usr/lib/libGLX.so \
   /usr/lib/libGLU.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libX11.so \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libGLEW.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libXrandr.so \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libEGL.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libpthread.a \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libstdc++.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libm.so \
@@ -129,7 +130,6 @@ wbe-lnx: \
   /usr/lib/libXcursor.so.1 \
   /usr/lib/libXdamage.so.1 \
   /usr/lib/libXcomposite.so.1 \
-  /usr/lib/libXrandr.so.2 \
   /usr/lib/libXinerama.so.1 \
   /usr/lib/libglycin-2.so.0 \
   /usr/lib/libthai.so.0 \
@@ -145,7 +145,6 @@ wbe-lnx: \
   /usr/lib/libffi.so.8 \
   /usr/lib/libpcre2-8.so.0 \
   /usr/lib/libGLdispatch.so.0 \
-  /usr/lib/libGL.so.1 \
   /usr/lib/ld-linux-x86-64.so.2 \
   /usr/lib/libsoxr.so.0 \
   /usr/lib/libjxl_cms.so.0.11 \
@@ -250,7 +249,9 @@ CMakeFiles/desktop-wallpaper.dir/src/monitor.cpp.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libX11.so:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libGLEW.so:
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libXrandr.so:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libEGL.so:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/../../../../lib/libpthread.a:
 
@@ -448,8 +449,6 @@ CMakeFiles/desktop-wallpaper.dir/src/monitor.cpp.o:
 
 /usr/lib/libXcomposite.so.1:
 
-/usr/lib/libXrandr.so.2:
-
 /usr/lib/libXinerama.so.1:
 
 /usr/lib/libglycin-2.so.0:
@@ -479,8 +478,6 @@ CMakeFiles/desktop-wallpaper.dir/src/monitor.cpp.o:
 /usr/lib/libpcre2-8.so.0:
 
 /usr/lib/libGLdispatch.so.0:
-
-/usr/lib/libGL.so.1:
 
 /usr/lib/ld-linux-x86-64.so.2:
 

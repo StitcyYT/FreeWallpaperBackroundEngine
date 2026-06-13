@@ -8,17 +8,20 @@ struct Platform {
     HWND hwnd = nullptr;
     HDC hdc = nullptr;
     HINSTANCE hinst = nullptr;
+    int x = 0, y = 0;
     int width = 0, height = 0;
 };
 
 #else
-#include <X11/Xlib.h>
 
 struct Platform {
-    Display* display = nullptr;
-    Window window = 0;
+    void* display = nullptr;
+    unsigned long window = 0;
     int screen = 0;
+    int x = 0, y = 0;
     int width = 0, height = 0;
+    void* eglDisplay = nullptr;
+    void* eglConfig = nullptr;
 };
 
 #endif

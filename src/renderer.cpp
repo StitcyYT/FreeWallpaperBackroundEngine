@@ -1,16 +1,11 @@
 #include "renderer.h"
 
-#include <GL/glew.h>
-#include <GL/glx.h>
+#include <X11/Xlib.h>
+#include <X11/Xutil.h>
+#include <EGL/egl.h>
+#define GL_GLEXT_PROTOTYPES
 #include <GL/gl.h>
 #include <cstdio>
-#include <cstdlib>
-
-static int ctxErrorOccurred = 0;
-static int ctxErrorHandler(Display* dpy, XErrorEvent* ev) {
-    ctxErrorOccurred = 1;
-    return 0;
-}
 
 static const char* vertexSrc = R"(
 #version 330 core
@@ -44,89 +39,77 @@ Renderer::~Renderer() {
     if (m_vbo) glDeleteBuffers(1, &m_vbo);
     if (m_ebo) glDeleteBuffers(1, &m_ebo);
     if (m_texture) glDeleteTextures(1, &m_texture);
-    if (m_glContext && m_platform.display) {
-        glXMakeCurrent(m_platform.display, 0, nullptr);
-        glXDestroyContext(m_platform.display, (GLXContext)m_glContext);
+
+    EGLDisplay dpy = (EGLDisplay)m_eglDisplay;
+    EGLContext ctx = (EGLContext)m_eglContext;
+    EGLSurface surface = (EGLSurface)m_eglSurface;
+
+    if (dpy != EGL_NO_DISPLAY) {
+        eglMakeCurrent(dpy, EGL_NO_SURFACE, EGL_NO_SURFACE, EGL_NO_CONTEXT);
+        if (ctx != EGL_NO_CONTEXT) eglDestroyContext(dpy, ctx);
+        if (surface != EGL_NO_SURFACE) eglDestroySurface(dpy, surface);
+        eglTerminate(dpy);
     }
-    m_glContext = nullptr;
+    m_eglDisplay = nullptr;
+    m_eglContext = nullptr;
+    m_eglSurface = nullptr;
 }
 
 bool Renderer::initGL() {
-    Display* dpy = m_platform.display;
-    int screen = m_platform.screen;
-    Window win = m_platform.window;
+    Display* dpy = (Display*)m_platform.display;
+    Window win = (Window)m_platform.window;
 
-    int fbAttribs[] = {
-        GLX_X_RENDERABLE, True,
-        GLX_DRAWABLE_TYPE, GLX_WINDOW_BIT,
-        GLX_RENDER_TYPE, GLX_RGBA_BIT,
-        GLX_X_VISUAL_TYPE, GLX_TRUE_COLOR,
-        GLX_RED_SIZE, 8,
-        GLX_GREEN_SIZE, 8,
-        GLX_BLUE_SIZE, 8,
-        GLX_ALPHA_SIZE, 8,
-        GLX_DEPTH_SIZE, 24,
-        GLX_DOUBLEBUFFER, True,
-        None
-    };
+    m_eglDisplay = m_platform.eglDisplay;
+    EGLDisplay edpy = (EGLDisplay)m_eglDisplay;
+    EGLConfig eglConfig = (EGLConfig)m_platform.eglConfig;
 
-    int fbCount = 0;
-    GLXFBConfig* fbConfigs = glXChooseFBConfig(dpy, screen, fbAttribs, &fbCount);
-    if (!fbConfigs || fbCount == 0) {
-        std::fprintf(stderr, "Failed to get FB config\n");
+    if (edpy == EGL_NO_DISPLAY || !eglConfig) {
+        std::fprintf(stderr, "No EGL display or config\n");
         return false;
     }
-    GLXFBConfig fbConfig = fbConfigs[0];
-    XFree(fbConfigs);
 
-    ctxErrorOccurred = 0;
-    XErrorHandler oldHandler = XSetErrorHandler(&ctxErrorHandler);
+    m_eglSurface = eglCreateWindowSurface(edpy, eglConfig,
+                                           (EGLNativeWindowType)win, nullptr);
+    if (m_eglSurface == EGL_NO_SURFACE) {
+        std::fprintf(stderr, "Failed to create EGL surface\n");
+        return false;
+    }
 
-    using glXCreateContextAttribsARBProc = GLXContext (*)(Display*, GLXFBConfig, GLXContext, Bool, const int*);
-    auto glXCreateContextAttribsARB = (glXCreateContextAttribsARBProc)
-        glXGetProcAddress((const unsigned char*)"glXCreateContextAttribsARB");
+    eglBindAPI(EGL_OPENGL_API);
 
-    int contextAttribs[] = {
-        GLX_CONTEXT_MAJOR_VERSION_ARB, 3,
-        GLX_CONTEXT_MINOR_VERSION_ARB, 3,
-        GLX_CONTEXT_PROFILE_MASK_ARB, GLX_CONTEXT_CORE_PROFILE_BIT_ARB,
-        None
+    EGLint contextAttribs[] = {
+        EGL_CONTEXT_MAJOR_VERSION, 3,
+        EGL_CONTEXT_MINOR_VERSION, 3,
+        EGL_CONTEXT_OPENGL_PROFILE_MASK, EGL_CONTEXT_OPENGL_CORE_PROFILE_BIT,
+        EGL_NONE
     };
 
-    GLXContext ctx = nullptr;
-    if (glXCreateContextAttribsARB) {
-        ctx = glXCreateContextAttribsARB(dpy, fbConfig, nullptr, True, contextAttribs);
-    }
-    XSync(dpy, False);
-
-    if (ctxErrorOccurred || !ctx) {
-        std::fprintf(stderr, "Falling back to OpenGL 3.0\n");
-        ctxErrorOccurred = 0;
-        int fallbackAttribs[] = {
-            GLX_CONTEXT_MAJOR_VERSION_ARB, 3,
-            GLX_CONTEXT_MINOR_VERSION_ARB, 0,
-            None
+    m_eglContext = eglCreateContext(edpy, eglConfig,
+                                     EGL_NO_CONTEXT, contextAttribs);
+    if (m_eglContext == EGL_NO_CONTEXT) {
+        EGLint fallbackAttribs[] = {
+            EGL_CONTEXT_MAJOR_VERSION, 3,
+            EGL_CONTEXT_MINOR_VERSION, 0,
+            EGL_NONE
         };
-        ctx = glXCreateContextAttribsARB(dpy, fbConfig, nullptr, True, fallbackAttribs);
+        m_eglContext = eglCreateContext(edpy, eglConfig,
+                                         EGL_NO_CONTEXT, fallbackAttribs);
     }
 
-    XSetErrorHandler(oldHandler);
-
-    if (!ctx) {
-        std::fprintf(stderr, "Failed to create GL context\n");
+    if (m_eglContext == EGL_NO_CONTEXT) {
+        std::fprintf(stderr, "Failed to create EGL context\n");
+        eglDestroySurface(edpy, (EGLSurface)m_eglSurface);
+        m_eglSurface = EGL_NO_SURFACE;
         return false;
     }
 
-    m_glContext = ctx;
-
-    if (!glXMakeCurrent(dpy, win, ctx)) {
-        std::fprintf(stderr, "Failed to make GL context current\n");
-        return false;
-    }
-
-    glewExperimental = GL_TRUE;
-    if (glewInit() != GLEW_OK) {
-        std::fprintf(stderr, "GLEW init failed\n");
+    if (!eglMakeCurrent(edpy, (EGLSurface)m_eglSurface,
+                         (EGLSurface)m_eglSurface, (EGLContext)m_eglContext)) {
+        std::fprintf(stderr, "Failed to make EGL context current\n");
+        eglDestroyContext(edpy, (EGLContext)m_eglContext);
+        m_eglContext = EGL_NO_CONTEXT;
+        eglDestroySurface(edpy, (EGLSurface)m_eglSurface);
+        m_eglSurface = EGL_NO_SURFACE;
         return false;
     }
 
@@ -245,15 +228,8 @@ void Renderer::render(const uint8_t* rgbData, int width, int height) {
 
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, m_texture);
-
-    if (width != m_texWidth || height != m_texHeight) {
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0,
-                     GL_RGB, GL_UNSIGNED_BYTE, nullptr);
-        m_texWidth = width;
-        m_texHeight = height;
-    }
-    glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, width, height,
-                    GL_RGB, GL_UNSIGNED_BYTE, rgbData);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0,
+                 GL_RGB, GL_UNSIGNED_BYTE, rgbData);
 
     glUseProgram(m_program);
     glUniform1i(m_texLoc, 0);
@@ -264,5 +240,5 @@ void Renderer::render(const uint8_t* rgbData, int width, int height) {
 }
 
 void Renderer::swap() {
-    glXSwapBuffers(m_platform.display, m_platform.window);
+    eglSwapBuffers((EGLDisplay)m_eglDisplay, (EGLSurface)m_eglSurface);
 }

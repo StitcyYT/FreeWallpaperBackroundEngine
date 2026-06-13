@@ -129,21 +129,17 @@ int main(int argc, char** argv) {
 
     GtkWidget* fileBox = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 6);
     GtkWidget* fileBtn = gtk_file_chooser_button_new("Select Video", GTK_FILE_CHOOSER_ACTION_OPEN);
-
     GtkFileFilter* filter = gtk_file_filter_new();
-    gtk_file_filter_set_name(filter, "Video files");
     gtk_file_filter_add_mime_type(filter, "video/*");
     gtk_file_filter_add_mime_type(filter, "image/gif");
-    const char* patterns[] = {"*.mp4", "*.avi", "*.mkv", "*.mov", "*.webm", "*.flv", "*.wmv", "*.gif", nullptr};
-    for (const char** p = patterns; *p; p++)
-        gtk_file_filter_add_pattern(filter, *p);
+    const char* exts[] = {"*.mp4","*.avi","*.mkv","*.mov","*.webm","*.flv",
+                          "*.wmv","*.mpg","*.mpeg","*.m4v","*.3gp","*.ogv",
+                          "*.ts","*.vob","*.divx","*.rmvb","*.gif", nullptr};
+    for (const char** e = exts; *e; e++)
+        gtk_file_filter_add_pattern(filter, *e);
+    gtk_file_filter_set_name(filter, "Video + GIF");
     gtk_file_chooser_add_filter(GTK_FILE_CHOOSER(fileBtn), filter);
-
-    GtkFileFilter* allFilter = gtk_file_filter_new();
-    gtk_file_filter_set_name(allFilter, "All files");
-    gtk_file_filter_add_pattern(allFilter, "*");
-    gtk_file_chooser_add_filter(GTK_FILE_CHOOSER(fileBtn), allFilter);
-
+    gtk_file_chooser_set_filter(GTK_FILE_CHOOSER(fileBtn), filter);
     gtk_box_pack_start(GTK_BOX(fileBox), fileBtn, FALSE, FALSE, 0);
     g_fileLabel = gtk_label_new("No file selected");
     gtk_box_pack_start(GTK_BOX(fileBox), g_fileLabel, TRUE, TRUE, 0);

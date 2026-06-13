@@ -4,6 +4,9 @@
 #include <X11/Xutil.h>
 #include <cstdio>
 
+#define DISPLAY(d) ((Display*)(d))
+#define WINDOW(w) ((Window)(w))
+
 static void sendStateMessage(Display* display, Window window, Atom state, int action) {
     Atom netWmState = XInternAtom(display, "_NET_WM_STATE", False);
     XEvent ev = {};
@@ -21,8 +24,8 @@ static void sendStateMessage(Display* display, Window window, Atom state, int ac
 }
 
 bool wallpaper::init(const Platform& platform) {
-    Display* display = platform.display;
-    Window window = platform.window;
+    Display* display = DISPLAY(platform.display);
+    Window window = WINDOW(platform.window);
 
     Atom netWmWindowType = XInternAtom(display, "_NET_WM_WINDOW_TYPE", False);
     Atom netWmWindowTypeDesktop = XInternAtom(display, "_NET_WM_WINDOW_TYPE_DESKTOP", False);
@@ -56,6 +59,6 @@ bool wallpaper::init(const Platform& platform) {
 }
 
 void wallpaper::setSize(const Platform& platform, int width, int height) {
-    XResizeWindow(platform.display, platform.window, width, height);
-    XFlush(platform.display);
+    XResizeWindow(DISPLAY(platform.display), WINDOW(platform.window), width, height);
+    XFlush(DISPLAY(platform.display));
 }

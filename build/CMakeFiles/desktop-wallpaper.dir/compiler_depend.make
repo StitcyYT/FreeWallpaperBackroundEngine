@@ -49,7 +49,9 @@ CMakeFiles/desktop-wallpaper.dir/src/decoder.cpp.o: /home/stitcyyt/wallpaper-eng
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
+  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -372,11 +374,19 @@ CMakeFiles/desktop-wallpaper.dir/src/engine.cpp.o: /home/stitcyyt/wallpaper-engi
   /home/stitcyyt/wallpaper-engine/src/platform.h \
   /home/stitcyyt/wallpaper-engine/src/renderer.h \
   /home/stitcyyt/wallpaper-engine/src/wallpaper.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
+  /usr/include/KHR/khrplatform.h \
   /usr/include/X11/X.h \
+  /usr/include/X11/Xdefs.h \
   /usr/include/X11/Xfuncproto.h \
   /usr/include/X11/Xlib.h \
   /usr/include/X11/Xosdefs.h \
   /usr/include/X11/Xutil.h \
+  /usr/include/X11/extensions/Xrandr.h \
+  /usr/include/X11/extensions/Xrender.h \
+  /usr/include/X11/extensions/randr.h \
+  /usr/include/X11/extensions/render.h \
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
   /usr/include/alloca.h \
@@ -411,7 +421,9 @@ CMakeFiles/desktop-wallpaper.dir/src/engine.cpp.o: /home/stitcyyt/wallpaper-engi
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
+  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -727,7 +739,9 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o: /home/stitcyyt/wallpaper-e
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
+  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -1008,7 +1022,9 @@ CMakeFiles/desktop-wallpaper.dir/src/main.cpp.o: /home/stitcyyt/wallpaper-engine
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
+  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -1914,7 +1930,9 @@ CMakeFiles/desktop-wallpaper.dir/src/monitor.cpp.o: /home/stitcyyt/wallpaper-eng
   /usr/include/bits/pthreadtypes.h \
   /usr/include/bits/select.h \
   /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/stdlib-bsearch.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -1968,11 +1986,11 @@ CMakeFiles/desktop-wallpaper.dir/src/monitor.cpp.o: /home/stitcyyt/wallpaper-eng
 CMakeFiles/desktop-wallpaper.dir/src/renderer.cpp.o: /home/stitcyyt/wallpaper-engine/src/renderer.cpp \
   /home/stitcyyt/wallpaper-engine/src/platform.h \
   /home/stitcyyt/wallpaper-engine/src/renderer.h \
+  /usr/include/EGL/egl.h \
+  /usr/include/EGL/eglplatform.h \
   /usr/include/GL/gl.h \
-  /usr/include/GL/glew.h \
-  /usr/include/GL/glu.h \
-  /usr/include/GL/glx.h \
-  /usr/include/GL/glxext.h \
+  /usr/include/GL/glext.h \
+  /usr/include/KHR/khrplatform.h \
   /usr/include/X11/X.h \
   /usr/include/X11/Xfuncproto.h \
   /usr/include/X11/Xlib.h \
@@ -1980,7 +1998,6 @@ CMakeFiles/desktop-wallpaper.dir/src/renderer.cpp.o: /home/stitcyyt/wallpaper-en
   /usr/include/X11/Xutil.h \
   /usr/include/X11/keysym.h \
   /usr/include/X11/keysymdef.h \
-  /usr/include/alloca.h \
   /usr/include/bits/atomic_wide_counter.h \
   /usr/include/bits/byteswap.h \
   /usr/include/bits/endian.h \
@@ -1995,8 +2012,8 @@ CMakeFiles/desktop-wallpaper.dir/src/renderer.cpp.o: /home/stitcyyt/wallpaper-en
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
+  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
-  /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
   /usr/include/bits/thread-shared-types.h \
@@ -2007,13 +2024,11 @@ CMakeFiles/desktop-wallpaper.dir/src/renderer.cpp.o: /home/stitcyyt/wallpaper-en
   /usr/include/bits/types/__FILE.h \
   /usr/include/bits/types/__fpos64_t.h \
   /usr/include/bits/types/__fpos_t.h \
-  /usr/include/bits/types/__locale_t.h \
   /usr/include/bits/types/__mbstate_t.h \
   /usr/include/bits/types/__sigset_t.h \
   /usr/include/bits/types/clock_t.h \
   /usr/include/bits/types/clockid_t.h \
   /usr/include/bits/types/cookie_io_functions_t.h \
-  /usr/include/bits/types/locale_t.h \
   /usr/include/bits/types/sigset_t.h \
   /usr/include/bits/types/struct_FILE.h \
   /usr/include/bits/types/struct_timespec.h \
@@ -2022,16 +2037,10 @@ CMakeFiles/desktop-wallpaper.dir/src/renderer.cpp.o: /home/stitcyyt/wallpaper-en
   /usr/include/bits/types/timer_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
-  /usr/include/bits/waitflags.h \
-  /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/wordsize.h \
-  /usr/include/c++/16.1.1/bits/std_abs.h \
-  /usr/include/c++/16.1.1/bits/version.h \
-  /usr/include/c++/16.1.1/cstddef \
   /usr/include/c++/16.1.1/cstdint \
   /usr/include/c++/16.1.1/cstdio \
-  /usr/include/c++/16.1.1/cstdlib \
   /usr/include/c++/16.1.1/pstl/pstl_config.h \
   /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
   /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/cpu_defines.h \
@@ -2041,11 +2050,9 @@ CMakeFiles/desktop-wallpaper.dir/src/renderer.cpp.o: /home/stitcyyt/wallpaper-en
   /usr/include/features.h \
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
-  /usr/include/inttypes.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdint.h \
   /usr/include/stdio.h \
-  /usr/include/stdlib.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/types.h \
@@ -2076,6 +2083,7 @@ CMakeFiles/desktop-wallpaper.dir/src/wallpaper.cpp.o: /home/stitcyyt/wallpaper-e
   /usr/include/bits/pthreadtypes.h \
   /usr/include/bits/select.h \
   /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdio.h \
   /usr/include/bits/stdio_lim.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -2122,8 +2130,9 @@ CMakeFiles/desktop-wallpaper.dir/src/wallpaper.cpp.o: /home/stitcyyt/wallpaper-e
 wbe-lnx: /usr/lib/Scrt1.o \
   /usr/lib/crti.o \
   /usr/lib/crtn.o \
-  /usr/lib/libGLEW.so \
+  /usr/lib/libEGL.so \
   /usr/lib/libX11.so \
+  /usr/lib/libXrandr.so \
   /usr/lib/libatk-1.0.so \
   /usr/lib/libatomic.so \
   /usr/lib/libatomic_asneeded.so \
@@ -2153,7 +2162,6 @@ wbe-lnx: /usr/lib/Scrt1.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/crtendS.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/libgcc.a \
   /usr/lib/ld-linux-x86-64.so.2 \
-  /usr/lib/libGL.so.1 \
   /usr/lib/libGLU.so \
   /usr/lib/libGLX.so \
   /usr/lib/libGLdispatch.so.0 \
@@ -2172,7 +2180,6 @@ wbe-lnx: /usr/lib/Scrt1.o \
   /usr/lib/libXfixes.so.3 \
   /usr/lib/libXi.so.6 \
   /usr/lib/libXinerama.so.1 \
-  /usr/lib/libXrandr.so.2 \
   /usr/lib/libXrender.so.1 \
   /usr/lib/libaom.so.3 \
   /usr/lib/libatk-bridge-2.0.so.0 \
@@ -2319,6 +2326,10 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 
 /usr/lib/libvorbisenc.so.2:
 
+/usr/lib/libxml2.so.16:
+
+/usr/lib/libvorbis.so.0:
+
 /usr/lib/libva.so.2:
 
 /usr/lib/libva-x11.so.2:
@@ -2433,12 +2444,6 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 
 /usr/lib/libXrender.so.1:
 
-/usr/lib/libxml2.so.16:
-
-/usr/lib/libvorbis.so.0:
-
-/usr/lib/libXrandr.so.2:
-
 /usr/lib/libXinerama.so.1:
 
 /usr/lib/libXfixes.so.3:
@@ -2467,6 +2472,8 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 
 /usr/lib/libpthread.a:
 
+/usr/lib/libm.so:
+
 /usr/lib/libharfbuzz.so:
 
 /usr/lib/libgtk-3.so:
@@ -2491,13 +2498,17 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 
 /usr/lib/libatk-1.0.so:
 
+/usr/lib/libXrandr.so:
+
 /usr/lib/libX11.so:
 
-/usr/lib/libm.so:
+/usr/lib/libEGL.so:
 
-/usr/lib/libGLEW.so:
+/usr/lib/Scrt1.o:
 
-/usr/include/glib-2.0/gio/gemblem.h:
+/home/stitcyyt/wallpaper-engine/src/wallpaper.cpp:
+
+/usr/include/GL/gl.h:
 
 /usr/lib/libopus.so.0:
 
@@ -2511,23 +2522,9 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 
 /usr/include/asm-generic/bitsperlong.h:
 
-/usr/include/glib-2.0/gio/gfileattribute.h:
-
-/usr/include/c++/16.1.1/bits/algorithmfwd.h:
-
-/usr/include/gtk-3.0/gtk/gtkstacksidebar.h:
-
-/usr/include/gtk-3.0/gtk/gtkcellrendererprogress.h:
-
 /usr/include/glib-2.0/gio/gdbusnamewatching.h:
 
 /usr/include/c++/16.1.1/bits/utility.h:
-
-/usr/include/glib-2.0/gio/gdbusnameowning.h:
-
-/usr/include/glib-2.0/gio/gdbusinterfaceskeleton.h:
-
-/usr/include/glib-2.0/glib/gslice.h:
 
 /usr/include/glib-2.0/gio/gnetworkaddress.h:
 
@@ -2673,6 +2670,8 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 
 /usr/include/bits/socket.h:
 
+/usr/include/X11/extensions/randr.h:
+
 /usr/lib/libopencore-amrwb.so.0:
 
 /usr/include/bits/signum-arch.h:
@@ -2711,11 +2710,13 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 
 /usr/include/time.h:
 
-/usr/include/glib-2.0/gio/gfileenumerator.h:
+/usr/include/glib-2.0/gio/gdbusinterfaceskeleton.h:
 
-/usr/include/gtk-3.0/gtk/gtkenums.h:
+/usr/include/glib-2.0/glib/gslice.h:
 
-/usr/include/gtk-3.0/gtk/gtkgesturezoom.h:
+/usr/include/X11/extensions/Xrandr.h:
+
+/usr/include/c++/16.1.1/bits/formatfwd.h:
 
 /usr/include/X11/Xutil.h:
 
@@ -2737,7 +2738,17 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 
 /usr/include/libavformat/avio.h:
 
+/usr/include/EGL/eglplatform.h:
+
+/usr/include/glib-2.0/gio/gdbusnameowning.h:
+
+/usr/include/EGL/egl.h:
+
 /usr/include/glib-2.0/gio/gfileinfo.h:
+
+/usr/include/gtk-3.0/gtk/gtkgestureswipe.h:
+
+/home/stitcyyt/wallpaper-engine/src/wallpaper.h:
 
 /usr/include/glib-2.0/gio/gdebugcontroller.h:
 
@@ -2768,8 +2779,6 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 /usr/include/X11/Xlib.h:
 
 /usr/include/sys/time.h:
-
-/usr/include/GL/glx.h:
 
 /usr/include/c++/16.1.1/cstring:
 
@@ -2826,8 +2835,6 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 /usr/include/bits/types/stack_t.h:
 
 /usr/include/c++/16.1.1/stdexcept:
-
-/usr/include/libavutil/frame.h:
 
 /usr/include/c++/16.1.1/bits/cxxabi_forced.h:
 
@@ -2955,13 +2962,13 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 
 /usr/include/pango-1.0/pango/pango-engine.h:
 
-/usr/include/X11/keysym.h:
+/usr/include/gtk-3.0/gtk/deprecated/gtkgradient.h:
 
-/usr/include/glib-2.0/gio/gactiongroup.h:
+/usr/include/glib-2.0/gio/gdbusserver.h:
 
-/usr/include/c++/16.1.1/bits/hash_bytes.h:
+/usr/include/c++/16.1.1/thread:
 
-/usr/include/bits/types/struct_tm.h:
+/usr/include/gtk-3.0/gtk/deprecated/gtkhsv.h:
 
 /usr/include/glib-2.0/glib/gtypes.h:
 
@@ -2996,6 +3003,14 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 /usr/include/c++/16.1.1/optional:
 
 /usr/include/c++/16.1.1/bits/sstream.tcc:
+
+/usr/include/c++/16.1.1/bits/algorithmfwd.h:
+
+/usr/include/glib-2.0/gio/gfileattribute.h:
+
+/usr/include/gtk-3.0/gtk/gtkstacksidebar.h:
+
+/usr/include/gtk-3.0/gtk/gtkcellrendererprogress.h:
 
 /usr/include/bits/sigstack.h:
 
@@ -3043,11 +3058,7 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 
 /usr/include/bits/wctype-wchar.h:
 
-/usr/include/c++/16.1.1/bits/codecvt.h:
-
 /usr/include/glib-2.0/gio/gconverter.h:
-
-/usr/include/glib-2.0/gio/gemblemedicon.h:
 
 /usr/lib/libsoxr.so.0:
 
@@ -3080,6 +3091,10 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 /usr/include/bits/types/struct_sched_param.h:
 
 /usr/include/bits/types/struct_itimerspec.h:
+
+/usr/include/glib-2.0/gio/gactiongroup.h:
+
+/usr/include/X11/keysym.h:
 
 /usr/include/c++/16.1.1/bits/ostream.tcc:
 
@@ -3125,6 +3140,10 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 
 /usr/include/glib-2.0/glib/gprimes.h:
 
+/usr/include/bits/types/struct_tm.h:
+
+/usr/include/c++/16.1.1/bits/hash_bytes.h:
+
 /usr/include/c++/16.1.1/bits/locale_classes.h:
 
 /usr/include/gtk-3.0/gtk/gtkmenubutton.h:
@@ -3150,6 +3169,32 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 /usr/include/c++/16.1.1/pstl/execution_defs.h:
 
 /usr/include/gtk-3.0/gtk/gtktreemodelfilter.h:
+
+/usr/include/c++/16.1.1/new:
+
+/usr/include/cairo/cairo-deprecated.h:
+
+/usr/include/linux/posix_types.h:
+
+/usr/include/gtk-3.0/gtk/gtkactionable.h:
+
+/usr/include/bits/types/FILE.h:
+
+/usr/include/bits/flt-eval-method.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/pthread.h:
+
+/usr/include/glib-2.0/glib/gstringchunk.h:
+
+/usr/include/glib-2.0/glib/gscanner.h:
+
+/usr/include/atk-1.0/atk/atktablecell.h:
+
+/usr/include/libavutil/time.h:
+
+/usr/include/gtk-3.0/gtk/gtkpopover.h:
 
 /usr/include/glib-2.0/gio/gdataoutputstream.h:
 
@@ -3179,19 +3224,9 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 
 /usr/include/bits/iscanonical.h:
 
-/usr/include/bits/flt-eval-method.h:
-
-/usr/include/cairo/cairo-deprecated.h:
-
-/usr/include/linux/posix_types.h:
-
-/usr/include/gtk-3.0/gtk/gtkactionable.h:
-
-/usr/include/bits/types/FILE.h:
+/usr/include/gtk-3.0/gtk/gtkmountoperation.h:
 
 /usr/include/gtk-3.0/gtk/gtkshortcutssection.h:
-
-/usr/include/gtk-3.0/gtk/gtkmountoperation.h:
 
 /usr/include/c++/16.1.1/csignal:
 
@@ -3214,8 +3249,6 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 /usr/include/c++/16.1.1/bits/allocated_ptr.h:
 
 /usr/include/glib-2.0/gio/gsocketconnection.h:
-
-/usr/include/GL/gl.h:
 
 /usr/lib/libtheoraenc.so.2:
 
@@ -3245,6 +3278,12 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 
 /usr/include/bits/types/__mbstate_t.h:
 
+/usr/include/libavutil/frame.h:
+
+/usr/include/X11/Xdefs.h:
+
+/usr/include/glib-2.0/gio/gresolver.h:
+
 /usr/include/c++/16.1.1/type_traits:
 
 /usr/include/gtk-3.0/gtk/gtknotebook.h:
@@ -3255,13 +3294,13 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 
 /usr/include/c++/16.1.1/bits/stdexcept_throwfwd.h:
 
+/usr/include/asm/errno.h:
+
 /usr/lib/libhwy.so.1:
 
 /home/stitcyyt/wallpaper-engine/src/engine.h:
 
 /usr/include/glib-2.0/gio/gfile.h:
-
-/usr/include/asm/errno.h:
 
 /usr/include/c++/16.1.1/ratio:
 
@@ -3284,6 +3323,10 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 /home/stitcyyt/wallpaper-engine/src/decoder.cpp:
 
 /usr/include/c++/16.1.1/bits/istream.tcc:
+
+/usr/include/c++/16.1.1/tr1/riemann_zeta.tcc:
+
+/usr/include/bits/byteswap.h:
 
 /usr/include/c++/16.1.1/concepts:
 
@@ -3312,6 +3355,8 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 /usr/include/gtk-3.0/gtk/gtkfilechooser.h:
 
 /usr/include/c++/16.1.1/istream:
+
+/usr/include/X11/extensions/render.h:
 
 /usr/include/glib-2.0/gio/gdbusobjectmanagerclient.h:
 
@@ -3359,14 +3404,6 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 
 /usr/include/c++/16.1.1/charconv:
 
-/usr/include/c++/16.1.1/bits/functional_hash.h:
-
-/usr/include/gtk-3.0/gtk/gtktextiter.h:
-
-/usr/include/libavutil/avconfig.h:
-
-/home/stitcyyt/wallpaper-engine/src/ipc.h:
-
 /home/stitcyyt/wallpaper-engine/src/main.cpp:
 
 /usr/include/gtk-3.0/gtk/gtktexttag.h:
@@ -3403,15 +3440,15 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 
 /usr/include/gtk-3.0/gtk/gtkeventcontroller.h:
 
+/usr/include/libavutil/avconfig.h:
+
+/home/stitcyyt/wallpaper-engine/src/ipc.h:
+
 /usr/include/bits/time.h:
 
 /usr/include/asm/posix_types.h:
 
 /usr/include/ctype.h:
-
-/usr/include/c++/16.1.1/bits/shared_ptr_atomic.h:
-
-/usr/include/glib-2.0/gio/gdtlsserverconnection.h:
 
 /usr/include/glib-2.0/gio/gdbusconnection.h:
 
@@ -3445,8 +3482,6 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 
 /usr/include/glib-2.0/gio/gtlsserverconnection.h:
 
-/usr/include/glib-2.0/gio/gdtlsclientconnection.h:
-
 /usr/include/bits/mathcalls-narrow.h:
 
 /usr/include/glib-2.0/gio/gio.h:
@@ -3467,12 +3502,6 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 
 /usr/include/gtk-3.0/gtk/gtkdnd.h:
 
-/usr/include/c++/16.1.1/bits/formatfwd.h:
-
-/home/stitcyyt/wallpaper-engine/src/wallpaper.h:
-
-/usr/include/gtk-3.0/gtk/gtkgestureswipe.h:
-
 /usr/include/bits/pthread_stack_min-dynamic.h:
 
 /usr/include/c++/16.1.1/bits/ostream.h:
@@ -3492,8 +3521,6 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 /usr/include/linux/limits.h:
 
 /usr/include/c++/16.1.1/bits/new_except.h:
-
-/usr/include/c++/16.1.1/new:
 
 /usr/include/bits/pthreadtypes.h:
 
@@ -3535,10 +3562,6 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 
 /usr/include/c++/16.1.1/bits/refwrap.h:
 
-/usr/include/glib-2.0/gio/gdtlsconnection.h:
-
-/usr/include/c++/16.1.1/bits/shared_ptr_base.h:
-
 /usr/include/atk-1.0/atk/atkselection.h:
 
 /usr/include/glib-2.0/glib/gmarkup.h:
@@ -3566,6 +3589,10 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 /usr/include/c++/16.1.1/bits/atomic_wait.h:
 
 /usr/include/gtk-3.0/gtk/gtkdragsource.h:
+
+/usr/include/c++/16.1.1/bits/codecvt.h:
+
+/usr/include/bits/stdlib-bsearch.h:
 
 /usr/include/c++/16.1.1/stdlib.h:
 
@@ -3615,19 +3642,9 @@ CMakeFiles/desktop-wallpaper.dir/src/ipc_linux.cpp.o:
 
 /usr/include/bits/stdint-uintn.h:
 
-/usr/include/bits/types.h:
+/usr/include/c++/16.1.1/bits/functional_hash.h:
 
-/usr/include/pthread.h:
-
-/usr/include/glib-2.0/glib/gstringchunk.h:
-
-/usr/include/glib-2.0/glib/gscanner.h:
-
-/usr/include/atk-1.0/atk/atktablecell.h:
-
-/usr/include/libavutil/time.h:
-
-/usr/include/gtk-3.0/gtk/gtkpopover.h:
+/usr/include/gtk-3.0/gtk/gtktextiter.h:
 
 CMakeFiles/desktop-wallpaper.dir/src/decoder.cpp.o:
 
@@ -3638,6 +3655,10 @@ CMakeFiles/desktop-wallpaper.dir/src/decoder.cpp.o:
 /usr/include/atk-1.0/atk/atkcomponent.h:
 
 /usr/include/glib-2.0/gio/gioerror.h:
+
+/home/stitcyyt/wallpaper-engine/src/renderer.cpp:
+
+/usr/include/c++/16.1.1/bits/iterator_concepts.h:
 
 /usr/include/gtk-3.0/gtk/gtktooltip.h:
 
@@ -3703,6 +3724,8 @@ CMakeFiles/desktop-wallpaper.dir/src/main.cpp.o:
 
 /usr/include/c++/16.1.1/bits/std_thread.h:
 
+/usr/include/glib-2.0/gio/gdtlsclientconnection.h:
+
 /usr/include/libavutil/common.h:
 
 /usr/include/math.h:
@@ -3723,9 +3746,9 @@ CMakeFiles/desktop-wallpaper.dir/src/main.cpp.o:
 
 /usr/include/glib-2.0/gio/gdbusproxy.h:
 
-/usr/include/bits/timex.h:
-
 /usr/include/c++/16.1.1/bits/functexcept.h:
+
+/usr/include/bits/timex.h:
 
 /usr/include/c++/16.1.1/bits/stl_tempbuf.h:
 
@@ -3773,9 +3796,13 @@ CMakeFiles/desktop-wallpaper.dir/src/main.cpp.o:
 
 /usr/include/c++/16.1.1/ctime:
 
+/usr/include/KHR/khrplatform.h:
+
 /usr/include/glib-2.0/gio/gmenu.h:
 
 /usr/include/gtk-3.0/gtk/gtkaccessible.h:
+
+/usr/include/X11/extensions/Xrender.h:
 
 /usr/include/c++/16.1.1/cwctype:
 
@@ -3797,6 +3824,10 @@ CMakeFiles/desktop-wallpaper.dir/src/main.cpp.o:
 
 /usr/include/gtk-3.0/gtk/gtkscrolledwindow.h:
 
+/usr/include/bits/stdio.h:
+
+/usr/include/gtk-3.0/gtk/gtklockbutton.h:
+
 /usr/include/c++/16.1.1/debug/debug.h:
 
 /usr/include/gtk-3.0/gtk/gtkcolorbutton.h:
@@ -3805,8 +3836,6 @@ CMakeFiles/desktop-wallpaper.dir/src/main.cpp.o:
 
 /usr/include/gtk-3.0/gtk/gtkfilechooserwidget.h:
 
-/usr/include/gtk-3.0/gtk/gtklockbutton.h:
-
 /usr/include/libavcodec/defs.h:
 
 /usr/include/c++/16.1.1/ext/alloc_traits.h:
@@ -3814,8 +3843,6 @@ CMakeFiles/desktop-wallpaper.dir/src/main.cpp.o:
 /usr/include/c++/16.1.1/ext/atomicity.h:
 
 /usr/include/libavformat/version.h:
-
-/usr/include/glib-2.0/gio/gfileicon.h:
 
 /usr/include/gtk-3.0/gtk/gtkmessagedialog.h:
 
@@ -3857,29 +3884,39 @@ CMakeFiles/desktop-wallpaper.dir/src/main.cpp.o:
 
 /usr/include/gtk-3.0/gtk/gtkcheckmenuitem.h:
 
-/usr/include/glib-2.0/gio/gdbusserver.h:
+/usr/include/c++/16.1.1/bits/shared_ptr_base.h:
 
-/usr/include/c++/16.1.1/thread:
+/usr/include/glib-2.0/gio/gdtlsconnection.h:
 
-/usr/include/gtk-3.0/gtk/deprecated/gtkhsv.h:
+/usr/include/c++/16.1.1/bits/shared_ptr_atomic.h:
 
-/usr/include/gtk-3.0/gtk/deprecated/gtkgradient.h:
+/usr/include/glib-2.0/gio/gdtlsserverconnection.h:
 
-/usr/include/bits/byteswap.h:
+/usr/include/glib-2.0/gio/gemblem.h:
 
-/usr/include/c++/16.1.1/tr1/riemann_zeta.tcc:
+/usr/include/glib-2.0/gio/gemblemedicon.h:
+
+/usr/include/glib-2.0/gio/gfileenumerator.h:
+
+/usr/include/gtk-3.0/gtk/gtkenums.h:
+
+/usr/include/gtk-3.0/gtk/gtkgesturezoom.h:
+
+/usr/include/glib-2.0/gio/gfileicon.h:
 
 /usr/include/glib-2.0/gio/gfileinputstream.h:
 
 /usr/include/glib-2.0/gio/gfilemonitor.h:
+
+/usr/include/gtk-3.0/gtk/deprecated/gtkhseparator.h:
+
+/usr/include/glib-2.0/glib/gdir.h:
 
 /usr/include/bits/math-vector.h:
 
 /usr/include/glib-2.0/gio/gfilenamecompleter.h:
 
 /usr/include/glib-2.0/glib/gvariant.h:
-
-/usr/lib/libGL.so.1:
 
 /usr/include/glib-2.0/gio/gfileoutputstream.h:
 
@@ -3912,8 +3949,6 @@ CMakeFiles/desktop-wallpaper.dir/src/main.cpp.o:
 /usr/include/glib-2.0/glib/deprecated/grel.h:
 
 /usr/include/glib-2.0/gio/giostream.h:
-
-/home/stitcyyt/wallpaper-engine/src/wallpaper.cpp:
 
 /usr/include/glib-2.0/gio/gdbusobject.h:
 
@@ -3973,8 +4008,6 @@ CMakeFiles/desktop-wallpaper.dir/src/main.cpp.o:
 
 /usr/include/glib-2.0/gio/gremoteactiongroup.h:
 
-/usr/include/glib-2.0/gio/gresolver.h:
-
 /usr/include/glib-2.0/gio/gseekable.h:
 
 /usr/include/glib-2.0/gio/gsettingsschema.h:
@@ -4015,15 +4048,13 @@ CMakeFiles/desktop-wallpaper.dir/src/main.cpp.o:
 
 /usr/include/gtk-3.0/gtk/deprecated/gtkcolorsel.h:
 
-/usr/include/c++/16.1.1/bits/iterator_concepts.h:
-
-/home/stitcyyt/wallpaper-engine/src/renderer.cpp:
-
 /usr/include/glib-2.0/gio/gsubprocesslauncher.h:
 
 /usr/include/glib-2.0/gio/gactionmap.h:
 
 /usr/include/glib-2.0/gio/gtcpconnection.h:
+
+/usr/include/GL/glext.h:
 
 /usr/include/c++/16.1.1/bits/vector.tcc:
 
@@ -4347,9 +4378,9 @@ CMakeFiles/desktop-wallpaper.dir/src/engine.cpp.o:
 
 /usr/include/gtk-3.0/gdk/gdkframetimings.h:
 
-/usr/include/gtk-3.0/gdk/gdkproperty.h:
-
 /usr/include/atk-1.0/atk/atkhypertext.h:
+
+/usr/include/gtk-3.0/gdk/gdkproperty.h:
 
 /usr/include/gtk-3.0/gdk/gdkglcontext.h:
 
@@ -4416,10 +4447,6 @@ CMakeFiles/desktop-wallpaper.dir/src/engine.cpp.o:
 /usr/include/glib-2.0/glib/gbitlock.h:
 
 /usr/include/gtk-3.0/gtk/gtkgesturedrag.h:
-
-/usr/include/glib-2.0/glib/gdir.h:
-
-/usr/include/gtk-3.0/gtk/deprecated/gtkhseparator.h:
 
 /usr/include/gtk-3.0/gtk/deprecated/gtkfontsel.h:
 
@@ -4609,8 +4636,6 @@ CMakeFiles/desktop-wallpaper.dir/src/engine.cpp.o:
 
 /usr/include/pango-1.0/pango/pango-fontset.h:
 
-/usr/include/GL/glu.h:
-
 /usr/include/gtk-3.0/gtk/gtkimcontextinfo.h:
 
 /usr/include/gtk-3.0/gtk/gtkinfobar.h:
@@ -4785,8 +4810,6 @@ CMakeFiles/desktop-wallpaper.dir/src/engine.cpp.o:
 
 /usr/include/harfbuzz/hb-paint.h:
 
-/usr/lib/Scrt1.o:
-
 /usr/include/glib-2.0/glib/glib-typeof.h:
 
 /usr/include/harfbuzz/hb-shape.h:
@@ -4838,7 +4861,3 @@ CMakeFiles/desktop-wallpaper.dir/src/engine.cpp.o:
 /usr/lib/glib-2.0/include/glibconfig.h:
 
 /home/stitcyyt/wallpaper-engine/src/monitor.cpp:
-
-/usr/include/GL/glew.h:
-
-/usr/include/GL/glxext.h:

@@ -34,11 +34,10 @@ CMakeFiles/desktop-wallpaper.dir/src/renderer.cpp.o: \
  /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
  /usr/include/bits/struct_rwlock.h /usr/include/X11/X.h \
  /usr/include/X11/Xfuncproto.h /usr/include/X11/Xosdefs.h \
- /usr/include/GL/glew.h /usr/include/c++/16.1.1/cstddef \
- /usr/include/c++/16.1.1/bits/version.h /usr/include/GL/glu.h \
- /usr/include/GL/gl.h /usr/include/GL/glx.h /usr/include/X11/Xutil.h \
- /usr/include/X11/keysym.h /usr/include/X11/keysymdef.h \
- /usr/include/GL/glxext.h /usr/include/inttypes.h \
+ /usr/include/X11/Xutil.h /usr/include/X11/keysym.h \
+ /usr/include/X11/keysymdef.h /usr/include/EGL/egl.h \
+ /usr/include/EGL/eglplatform.h /usr/include/KHR/khrplatform.h \
+ /usr/include/GL/gl.h /usr/include/GL/glext.h \
  /usr/include/c++/16.1.1/cstdio /usr/include/stdio.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/include/stdarg.h \
  /usr/include/bits/types/__fpos_t.h /usr/include/bits/types/__mbstate_t.h \
@@ -46,8 +45,4 @@ CMakeFiles/desktop-wallpaper.dir/src/renderer.cpp.o: \
  /usr/include/bits/types/FILE.h /usr/include/bits/types/struct_FILE.h \
  /usr/include/bits/types/cookie_io_functions_t.h \
  /usr/include/bits/stdio_lim.h /usr/include/bits/floatn.h \
- /usr/include/bits/floatn-common.h /usr/include/c++/16.1.1/cstdlib \
- /usr/include/stdlib.h /usr/include/bits/waitflags.h \
- /usr/include/bits/waitstatus.h /usr/include/bits/types/locale_t.h \
- /usr/include/bits/types/__locale_t.h /usr/include/alloca.h \
- /usr/include/bits/stdlib-float.h /usr/include/c++/16.1.1/bits/std_abs.h
+ /usr/include/bits/floatn-common.h /usr/include/bits/stdio.h
